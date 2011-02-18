@@ -1,11 +1,11 @@
 // ==UserScript==
-// @name          ADD Delay
-// @description	  Hides specified sites for 30 seconds when loading them to break your bad habits.
-// @version       0.1
-// @author        scragz
-// @namespace     http://scragz.com/
-// @matches       <all_urls>
-// @run-at 		  document_start
+// @name ADD Delay
+// @description Hides specified sites for 30 seconds when loading them to break your bad habits.
+// @version 0.1
+// @author scragz
+// @namespace http://scragz.com/
+// @matches <all_urls>
+// @run-at document-start
 // ==/UserScript==
 
 /* begin configuration */
