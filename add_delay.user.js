@@ -4,8 +4,6 @@
 // @version       0.1
 // @author        scragz
 // @namespace     http://scragz.com/
-// @include       http://www.facebook.com/*
-// @include       http://facebook.com/*
 // ==/UserScript==
 
 /* begin configuration */
