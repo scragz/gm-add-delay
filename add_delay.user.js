@@ -5,7 +5,7 @@
 // @author        scragz
 // @namespace     http://scragz.com/
 // @matches       <all_urls>
-// @run-at 		  document-start
+// @run-at 		  document_start
 // ==/UserScript==
 
 /* begin configuration */
