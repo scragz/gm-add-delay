@@ -10,7 +10,7 @@
 
 /* begin configuration */
 var config = {
-	delay: 10,
+	delay: 30,
 	sites: [
 		'www.facebook.com',
 		'facebook.com'
@@ -78,7 +78,7 @@ var hideBody = function()
 	var tries = 0;
 	if (!body) {
 		tries++;
-		if (tries < 25) window.setTimeout(hideBody, 100);
+		if (tries < 25) window.setTimeout(hideBody, 50);
 		return;
     }
 	body.style.display = 'none';
