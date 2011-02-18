@@ -4,11 +4,13 @@
 // @version       0.1
 // @author        scragz
 // @namespace     http://scragz.com/
+// @matches       <all_urls>
+// @run-at 		  document-start
 // ==/UserScript==
 
 /* begin configuration */
 var config = {
-	delay: 30,
+	delay: 10,
 	sites: [
 		'www.facebook.com',
 		'facebook.com'
@@ -73,7 +75,12 @@ var addGlobalStyle = function(css)
 var hideBody = function()
 {
 	var body = _gt('body')[0];
-	if (!body) { return; }
+	var tries = 0;
+	if (!body) {
+		tries++;
+		if (tries < 25) window.setTimeout(hideBody, 100);
+		return;
+    }
 	body.style.display = 'none';
 }
 
@@ -104,7 +111,8 @@ var countdown = function(num)
 }
 
 var re = new RegExp('https?://('+config.sites.join('|')+')/.*');
-if (re.test(window.location.href)) { // why are you looking at this rubbish?
+var ref = new RegExp('https?://'+window.location.hostname+'/.*');
+if (re.test(window.location.href) && !ref.test(window.document.referrer)) { // why are you looking at this rubbish?
 	hideBody();
 	window.setTimeout(showBody, config.delay*1000);
 	countdown(config.delay);
